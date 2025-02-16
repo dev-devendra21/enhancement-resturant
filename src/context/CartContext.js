@@ -70,15 +70,23 @@ const CartContextProvider = ({children}) => {
   }
 
   const decrementCartItemQuantity = id => {
-    const updatedCart = cart.map(eachItem =>
-      eachItem.id === id
-        ? {...eachItem, quantity: eachItem.quantity - 1}
-        : eachItem,
-    )
-    setCart(updatedCart)
+    const updatedCart = cart.map(eachItem => {
+      if (eachItem.id === id) {
+        if (eachItem.quantity > 0) {
+          return {...eachItem, quantity: eachItem.quantity - 1}
+        }
+        return null
+      }
+      return eachItem
+    })
+    const filteredCart = updatedCart.filter(item => item && item.quantity !== 0)
+
+    setCart(filteredCart)
   }
 
-  const removeAllCartItems = () => {}
+  const removeAllCartItems = () => {
+    setCart([])
+  }
 
   if (restaurantData.status === ApiStatusConstant.INPROCESS) {
     return (

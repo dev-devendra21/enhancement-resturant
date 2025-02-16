@@ -10,8 +10,19 @@
   font-size: 25px;
 }
 
+.nav-link {
+  text-decoration: none;
+}
+
 .my-orders {
   display: none;
+}
+
+.logout-btn {
+  background-color: #ff6347;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,8 +53,15 @@
 
 .cart-icon {
   font-size: 40px;
+  cursor: pointer;
 }
 
 .horizontal-line {
   color: grey;
+}
+
+.cart-btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
