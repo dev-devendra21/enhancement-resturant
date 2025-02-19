@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {Redirect} from 'react-router-dom'
+import Cookies from 'js-cookie'
 
 import './index.css'
 
@@ -19,7 +20,7 @@ const Login = props => {
     const result = await res.json()
     if (res.ok) {
       setError('')
-      localStorage.setItem('token', result.jwt_token)
+      Cookies.set('token', result.jwt_token, {expires: 1})
       history.replace('/')
     } else {
       setError(result.error_msg)
@@ -30,7 +31,7 @@ const Login = props => {
     e.preventDefault()
     submitForm()
   }
-  const token = localStorage.getItem('token')
+  const token = Cookies.get('token')
   if (token) {
     return <Redirect to="/" />
   }

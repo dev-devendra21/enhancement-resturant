@@ -1,4 +1,5 @@
 import {Link, withRouter} from 'react-router-dom'
+import Cookies from 'js-cookie'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import './index.css'
 import {useCart} from '../../context/CartContext'
@@ -11,7 +12,7 @@ const Header = props => {
   }
   const {history} = props
   const handleLogout = () => {
-    localStorage.removeItem('token')
+    Cookies.remove('token')
     history.replace('/login')
   }
   return (
