@@ -37,13 +37,16 @@ const Login = props => {
   }
   return (
     <div className="container">
-      <main>
+      <main className="login-card">
+        <h1>Login</h1>
         <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
           <div>
+            <label htmlFor="username">USERNAME</label>
+            <br />
             <input
               type="text"
               name="username"
+              id="username"
               placeholder="Enter Your username"
               value={username}
               onChange={e => setUsername(e.target.value)}
@@ -51,9 +54,12 @@ const Login = props => {
             />
           </div>
           <div>
+            <label htmlFor="password">PASSWORD</label>
+            <br />
             <input
               type="password"
               name="password"
+              id="password"
               placeholder="Enter Your password"
               value={password}
               onChange={e => setPassword(e.target.value)}
@@ -61,11 +67,9 @@ const Login = props => {
             />
           </div>
           <p className="error-msg">{error || ''}</p>
-          <div>
-            <button type="submit" className="login-btn">
-              Login
-            </button>
-          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
         </form>
       </main>
     </div>

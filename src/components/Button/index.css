@@ -9,6 +9,14 @@
   border-width: 0px;
 }
 
+.add-to-cart-btn {
+  background-color: #ff6347;
+  padding: 15px;
+  border-radius: 20px;
+  border-width: 0px;
+  color: #ffffff;
+}
+
 .button-action {
   color: #ffffff;
   border-width: 0px;

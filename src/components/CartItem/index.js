@@ -27,10 +27,14 @@ const CartItem = ({item, quantityIncrement, quantityDecrement, removeItem}) => {
         </button>
       </div>
       <div>
-        <p>{price * quantity}</p>
+        <p className="item-price">{price * quantity}</p>
       </div>
       <div>
-        <button type="button" onClick={() => removeItem(id)}>
+        <button
+          type="button"
+          className="remove-item-btn"
+          onClick={() => removeItem(id)}
+        >
           X
         </button>
       </div>

@@ -21,3 +21,10 @@
   text-align: end;
   padding-right: 10px;
 }
+
+.remove-all-btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 157, 255, 0.818);
+  color: #ffffff;
+}

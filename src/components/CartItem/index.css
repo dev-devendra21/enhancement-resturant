@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  border: 1px solid black;
+  border: 1px solid rgb(253, 161, 3);
   border-radius: 10px;
   align-items: center;
   padding: 10px;
@@ -27,4 +27,20 @@
   padding: 10px;
   cursor: pointer;
   margin: 10px;
+  background-color: green;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.remove-item-btn {
+  background-color: red;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: cursive;
 }

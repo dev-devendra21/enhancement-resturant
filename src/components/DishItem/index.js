@@ -87,9 +87,10 @@ const DishItem = props => {
         <div>
           {dishAvailability ? (
             <Button
+              id={dishId}
+              addToCart={addToCart}
               increaseQuantity={handleIncreaseQuantity}
               decreaseQuantity={handleDecreaseQuantity}
-              id={dishId}
             />
           ) : (
             <p className="not-available">Not available</p>
