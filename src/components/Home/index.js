@@ -30,6 +30,8 @@ const Home = () => {
   let data = []
   let index = 0
 
+  console.log(restaurantData)
+
   if (restaurantData.status === 'SUCCESS') {
     data = formatData(restaurantData.data.table_menu_list)
     index = data.findIndex(eachData => eachData.menuCategoryId === selectedId)
